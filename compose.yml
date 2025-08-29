@@ -1,0 +1,11 @@
+services: # 서비스 아래 여러 서비스 지정 가능 (딕셔너리 형태)
+  app: # Name of the service
+    build: # Build the image using the Dockerfile in the current directory
+      context: my-first-docker # 어떤 디렉토리에 docker file이 있는지 설정
+    ports: # 포트 맵핑
+      - "5001:5000" # Map port 5001 on the host to port 5000 in the container
+  # app2: # Name of the service
+  #   build: # Build the image using the Dockerfile in the current directory
+  #     context: my-first-docker
+  #   ports:
+  #     - "5001:5000" # Map port 5001 on the host to port 5000 in the container
